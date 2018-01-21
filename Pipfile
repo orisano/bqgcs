@@ -15,9 +15,9 @@ google-cloud-bigquery = "*"
 
 yapf = "*"
 isort = "*"
-typing = "*"
 google-cloud-storage = "*"
 pandas = "*"
+twine = "*"
 
 
 [requires]
