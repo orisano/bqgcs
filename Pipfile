@@ -1,0 +1,25 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+six = "*"
+google-cloud-bigquery = "*"
+
+
+[dev-packages]
+
+yapf = "*"
+isort = "*"
+typing = "*"
+google-cloud-storage = "*"
+pandas = "*"
+
+
+[requires]
+
+python_version = "3.6"
