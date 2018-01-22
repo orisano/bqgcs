@@ -4,4 +4,7 @@ from .bq import (
     query_to_table,
 )
 from .gcs import gcs_to_bq
-from .pd import pd_to_gcs
+from .pd import (
+    generate_bq_schema,
+    pd_to_gcs,
+)

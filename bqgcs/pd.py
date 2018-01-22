@@ -1,8 +1,10 @@
+from google.cloud import bigquery
 import six
 
 if False:
     from google.cloud import storage
     import pandas as pd
+    from typing import *
 
 
 def pd_to_gcs(dataframe, blob):  # type: (pd.DataFrame, storage.Blob) -> None
@@ -22,3 +24,20 @@ def pd_to_gcs(dataframe, blob):  # type: (pd.DataFrame, storage.Blob) -> None
         raise Exception("unsupported format: {}".format(ext))
 
     blob.upload_from_file(buf, rewind=True)
+
+
+def generate_bq_schema(dataframe):  # type: (pd.DataFrame) -> [bigquery.SchemaField]
+    type_mapping = {
+        'i': 'INTEGER',
+        'b': 'BOOLEAN',
+        'f': 'FLOAT',
+        'O': 'STRING',
+        'S': 'STRING',
+        'U': 'STRING',
+        'M': 'TIMESTAMP',
+    }
+    dataframe.to_csv()
+    return [
+        bigquery.SchemaField(column_name, type_mapping.get(dtype.kind, 'STRING'))
+        for column_name, dtype in dataframe.dtypes.items()
+    ]
