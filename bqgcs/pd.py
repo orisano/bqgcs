@@ -17,7 +17,7 @@ def pd_to_gcs(dataframe, blob):  # type: (pd.DataFrame, storage.Blob) -> None
     buf = six.BytesIO()
     ext = extensions[-1]
     if ext == "csv":
-        dataframe.to_csv(buf, compression=compression)
+        dataframe.to_csv(buf, compression=compression, index=False)
     elif ext == "json":
         dataframe.to_json(buf, compression=compression)
     else:
