@@ -18,6 +18,7 @@ isort = "*"
 google-cloud-storage = "*"
 pandas = "*"
 twine = "*"
+typing = "*"
 
 
 [requires]
