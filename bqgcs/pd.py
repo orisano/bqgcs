@@ -1,5 +1,5 @@
-from google.cloud import bigquery
 import six
+from google.cloud import bigquery
 
 if False:
     from google.cloud import storage
