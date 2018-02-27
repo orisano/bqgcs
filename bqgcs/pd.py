@@ -14,7 +14,7 @@ def pd_to_gcs(dataframe, blob):  # type: (pd.DataFrame, storage.Blob) -> None
         compression = "gzip"
         extensions = extensions[:-1]
 
-    buf = six.BytesIO()
+    buf = six.StringIO()
     ext = extensions[-1]
     if ext == "csv":
         dataframe.to_csv(buf, compression=compression, index=False)
