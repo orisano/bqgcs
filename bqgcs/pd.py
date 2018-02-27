@@ -23,7 +23,7 @@ def pd_to_gcs(dataframe, blob):  # type: (pd.DataFrame, storage.Blob) -> None
     else:
         raise Exception("unsupported format: {}".format(ext))
 
-    blob.upload_from_file(buf, rewind=True)
+    blob.upload_from_file(six.BytesIO(buf.getvalue().encode("utf-8")), rewind=True)
 
 
 def generate_bq_schema(dataframe):  # type: (pd.DataFrame) -> [bigquery.SchemaField]
