@@ -3,13 +3,13 @@ BQGCS
 | Google Cloud Storage Connector for Google BigQuery.
 
 Getting Started
---------
+----------------
 .. code:: bash
 
     pip install bqgcs
 
 How to Use
---------
+-----------
 .. code:: python
 
     import bqgcs
@@ -23,6 +23,9 @@ How to Use
     table = bq.dataset("<<dataset>>").table("<<table>>")
     bqgcs.gcs_to_bq(blob, table)
 
+Author
+-------
+Nao YONASHIRO(@orisano)
 
 License
 --------
