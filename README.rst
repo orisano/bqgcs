@@ -25,7 +25,7 @@ How to Use
 
 Author
 -------
-Nao YONASHIRO(@orisano)
+Nao Yonashiro (@orisano)
 
 License
 --------
