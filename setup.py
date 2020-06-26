@@ -12,7 +12,7 @@ NAME = 'bqgcs'
 DESCRIPTION = 'Google Cloud Storage Connector for Google BigQuery'
 URL = 'https://github.com/orisano/bqgcs'
 EMAIL = 'owan.orisano@gmail.com'
-AUTHOR = 'Nao YONASHIRO'
+AUTHOR = 'Nao Yonashiro'
 
 REQUIRED = [
     'six',
